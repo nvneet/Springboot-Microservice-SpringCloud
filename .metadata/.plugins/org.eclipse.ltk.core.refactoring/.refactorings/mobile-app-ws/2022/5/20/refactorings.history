@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 2 packages to &apos;PhotoAppApiUsers/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;mobile-app-ws&apos;&#x0D;&#x0A;- Destination element: &apos;PhotoAppApiUsers/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     mobile-app-ws/src/main/java/nav.app.exceptions&#x0D;&#x0A;     mobile-app-ws/src/main/java/nav.app.exceptions.handler" description="Copy packages" destination="=PhotoAppApiUsers/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;nav.app.exceptions" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;nav.app.exceptions.handler" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1652020532838" version="1.0"/>
-</session>
