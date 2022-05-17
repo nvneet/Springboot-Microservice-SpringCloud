@@ -1,0 +1,5 @@
+package nav.photoapp.api.users.security;
+
+public class AuthenticationFilter {
+
+}

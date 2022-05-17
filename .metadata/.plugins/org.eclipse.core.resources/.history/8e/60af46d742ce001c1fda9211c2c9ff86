@@ -1,0 +1,10 @@
+package nav.photoapp.api.accountmanagement.controller;
+
+@
+public class AccountStatus {
+	
+	public String status() {
+		return "Active";
+	}
+
+}

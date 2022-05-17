@@ -1,0 +1,5 @@
+package nav.photoapp.api.gateway;
+
+public class AuthorizationHeaderFilter extends {
+
+}

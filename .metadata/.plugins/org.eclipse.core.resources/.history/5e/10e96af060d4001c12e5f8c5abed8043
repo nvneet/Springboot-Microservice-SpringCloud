@@ -1,0 +1,5 @@
+create a custom filter class that can be assigned to specific gateway route and it
+will be executed before spring cloud api gateway route http request to 
+destination microservice. Here we will use this filter to check if the request 
+webservice endpoint dies contain jwt token and if the provided jwt token has 
+been signed with the correct token secret.

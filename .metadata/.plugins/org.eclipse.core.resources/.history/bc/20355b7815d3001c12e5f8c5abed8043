@@ -1,0 +1,28 @@
+package nav.photoapp.api.users.service;
+
+public class Hiding {
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Demo {
+	public static void method1() {
+		System.out.println("Method-1 of the Demo class is executed.");
+	}
+
+	public void method2() {
+		System.out.println("Method-2 of the Demo class is executed.");
+	}
+}
+
+class Sample extends Demo {
+	public static void method1() {
+		System.out.println("Method-1 of the Sample class is executed.");
+	}
+
+	public void method2() {
+		System.out.println("Method-2 of the Sample class is executed.");
+	}
+}
