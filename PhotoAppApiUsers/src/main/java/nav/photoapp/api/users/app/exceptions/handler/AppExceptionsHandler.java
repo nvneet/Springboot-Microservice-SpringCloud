@@ -14,14 +14,12 @@ import nav.photoapp.api.users.app.exceptions.UserServiceException;
 public class AppExceptionsHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(value = {Exception.class})
-	public ResponseEntity<Object> handleAnyException(Exception ex, WebRequest request){
-		
+	public ResponseEntity<Object> handleAnyException(Exception ex, WebRequest request){		
 		return new ResponseEntity<>(ex, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	@ExceptionHandler(value = {NullPointerException.class, UserServiceException.class})
 	public ResponseEntity<Object> handleSpecificExceptions(Exception ex, WebRequest request){
-
 		return new ResponseEntity<>(ex, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }

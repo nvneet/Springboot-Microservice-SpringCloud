@@ -22,17 +22,22 @@ public class UsersServiceImpl implements UsersService {
 	private UsersRepository usersRepository;
 	BCryptPasswordEncoder bCryptPasswordEncoder;
 	
+//	@Autowired
+//	public UsersServiceImpl(UsersRepository usersRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+//		this.usersRepository = usersRepository;
+//		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+//	}
+	
 	@Autowired
-	public UsersServiceImpl(UsersRepository usersRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+	public UsersServiceImpl(UsersRepository usersRepository) {
 		this.usersRepository = usersRepository;
-		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
 	}
 	
 	@Override
 	public UserDTO createUser(UserDTO userDetail) {
 		
 		userDetail.setUserId(UUID.randomUUID().toString());
-		userDetail.setEncryptedPassword(bCryptPasswordEncoder.encode(userDetail.getPassword()));
+//		userDetail.setEncryptedPassword(bCryptPasswordEncoder.encode(userDetail.getPassword()));
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		UserEntity userEntity = modelMapper.map(userDetail, UserEntity.class);

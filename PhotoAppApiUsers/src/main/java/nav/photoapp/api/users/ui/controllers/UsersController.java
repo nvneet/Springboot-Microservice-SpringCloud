@@ -38,7 +38,6 @@ public class UsersController {
 		produces = { MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE }
 	)
 	public ResponseEntity<CreateUserResponseModel> createUser(@RequestBody CreateUserRequestModel userDetail) {
-
 		ModelMapper modelmapper = new ModelMapper();
 		modelmapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		

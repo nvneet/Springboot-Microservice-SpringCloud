@@ -17,13 +17,19 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	
 	private Environment environment;
 	private UsersService usersService;
-	private BCryptPasswordEncoder bCryptPasswordEncoder; // spring security crypto bcrypt
+//	private BCryptPasswordEncoder bCryptPasswordEncoder; // spring security crypto bcrypt
+	
+//	@Autowired
+//	public WebSecurity(Environment environment, UsersService usersService, BCryptPasswordEncoder bCryptPasswordEncoder) {
+//		this.environment = environment;
+//		this.usersService = usersService;
+//		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+//	}
 	
 	@Autowired
-	public WebSecurity(Environment environment, UsersService usersService, BCryptPasswordEncoder bCryptPasswordEncoder) {
+	public WebSecurity(Environment environment, UsersService usersService) {
 		this.environment = environment;
 		this.usersService = usersService;
-		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
 	}
 	
 	@Override
@@ -48,6 +54,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure (AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(usersService).passwordEncoder(bCryptPasswordEncoder);
+//		auth.userDetailsService(usersService).passwordEncoder(bCryptPasswordEncoder);
 	}
 }
